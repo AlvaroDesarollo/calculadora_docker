@@ -1,0 +1,62 @@
+<app-header> </app-header>
+
+<ion-content class="bodyy" [fullscreen]="true">
+  <ion-grid class="bodyy calculadora" [fixed]="true">
+    <ion-row>
+      <ion-input
+        style="color: white !important"
+        [disabled]="true"
+        [(ngModel)]="resultado"
+      ></ion-input>
+    </ion-row>
+    <ion-row>
+      <ion-col (click)="realizarOperacion('C')" class="operacionSuperiores"
+        >C</ion-col
+      >
+      <ion-col (click)="realizarOperacion('sqrt')" class="operacionSuperiores"
+        ><img
+          style="color: white !important"
+          src="../../../assets/icon/raiz-cuadrada.svg"
+      /></ion-col>
+      <ion-col (click)="realizarOperacion('%')" class="operacionSuperiores"
+        >%</ion-col
+      >
+      <ion-col (click)="realizarOperacion('/')" class="operacionSuperiores"
+        >/</ion-col
+      >
+    </ion-row>
+    <ion-row>
+      <ion-col (click)="realizarOperacion('7')" class="numeros">8</ion-col>
+      <ion-col (click)="realizarOperacion('8')" class="numeros">8</ion-col>
+      <ion-col (click)="realizarOperacion('9')" class="numeros">9</ion-col>
+      <ion-col (click)="realizarOperacion('*')" class="operacionBasicas"
+        >x</ion-col
+      >
+    </ion-row>
+    <ion-row>
+      <ion-col (click)="realizarOperacion('4')" class="numeros">4</ion-col>
+      <ion-col (click)="realizarOperacion('5')" class="numeros">5</ion-col>
+      <ion-col (click)="realizarOperacion('6')" class="numeros">6</ion-col>
+      <ion-col (click)="realizarOperacion('-')" class="operacionBasicas"
+        >-</ion-col
+      >
+    </ion-row>
+    <ion-row>
+      <ion-col (click)="realizarOperacion('1')" class="numeros">1</ion-col>
+      <ion-col (click)="realizarOperacion('2')" class="numeros">2</ion-col>
+      <ion-col (click)="realizarOperacion('3')" class="numeros">3</ion-col>
+      <ion-col (click)="realizarOperacion('+')" class="operacionBasicas"
+        >+</ion-col
+      >
+    </ion-row>
+    <ion-row>
+      <ion-col (click)="realizarOperacion('0')" class="numeros" size="6"
+        >0</ion-col
+      >
+      <ion-col (click)="realizarOperacion('.')" class="numeros">,</ion-col>
+      <ion-col (click)="realizarOperacion('=')" class="operacionBasicas"
+        >=</ion-col
+      >
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,47 @@
+ion-col {
+  background-color: #135d54;
+  border: solid 1px #fff;
+  color: #fff;
+  text-align: center;
+}
+
+.calculadora {
+  border: solid 1px #fff;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  & .numeros {
+    background-color: #666666;
+  }
+  & .operacionBasicas {
+    background-color: #ff9800;
+  }
+  & .operacionSuperiores {
+    background-color: #8c8c8c;
+  }
+}
+
+// .numeros {
+//   background-color: #666666;
+//   border: solid 1px #fff;
+//   color: #fff;
+//   text-align: center;
+// }
+
+// .operacionBasicas {
+//   background-color: #ff9800;
+//   border: solid 1px #fff;
+//   color: #fff;
+//   text-align: center;
+// }
+
+// .operacionSuperiores {
+//   background-color: #8c8c8c;
+//   border: solid 1px #fff;
+//   color: #fff;
+//   text-align: center;
+// }
+
+.bodyy {
+  background-color: #454546;
+}
