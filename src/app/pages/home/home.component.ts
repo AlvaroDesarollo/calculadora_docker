@@ -18,6 +18,7 @@ interface Operacion {
 export class HomeComponent implements OnInit {
   public op: Operacion[] = [];
   public resultado: string = '';
+  public numTemporal: string = '';
 
   constructor(
     private petition: PetitionsService,
@@ -91,6 +92,7 @@ export class HomeComponent implements OnInit {
     console.log('result: ', result);
     this.op[0].res = result;
     this.op[0].num1 = result;
+    this.numTemporal = this.op[0].num2
     this.op[0].num2 = '';
     this.resultado = result.toString();
   }
@@ -99,7 +101,7 @@ export class HomeComponent implements OnInit {
     let that = this;
     const body = {
       priNum: parseFloat(this.op[0].num1),
-      segNum: parseFloat(this.op[0].num2),
+      segNum: parseFloat(this.op[0].num2 ? this.op[0].num2 : this.numTemporal),
     };
     const operacion = this.convertirSignoEnLetra(this.op[0].op);
     if (operacion == 'raiz') {
@@ -110,6 +112,7 @@ export class HomeComponent implements OnInit {
       next(value) {
         that.op[0].res = value;
         that.op[0].num1 = value;
+        that.numTemporal = that.op[0].num2 ? that.op[0].num2 : that.numTemporal
         that.op[0].num2 = '';
 
         that.resultado = value;
